@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+body {
+  font-family: "Poppins";
+}
+h1,
+h4 {
+  color: #ef7d00;
+  text-align: center;
+}
+h5 {
+  text-align: center;
+}
+label {
+  color: #662483;
+}
+span {
+  font-size: small;
+  color: #bc0c06;
+}
+.pContent {
+  display: flex;
+  justify-content: center;
+}
+.radioStyled {
+  cursor: pointer;
+  border: 2px solid #662483;
+  border-radius: 1em;
+  font-size: 75%;
+  width: 220px;
+  margin: 0.25em 1em 0.25em 0.25em;
+  padding: 1.6em 1.1em 1.6em 1.1em;
+  background-color: rgb(255, 255, 255);
+}
