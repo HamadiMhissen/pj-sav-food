@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/HamadiMhissen/pj-sav-food/static/css/main.a573ead8.chunk.css",
+    "main.js": "/HamadiMhissen/pj-sav-food/static/js/main.75ab352f.chunk.js",
+    "main.js.map": "/HamadiMhissen/pj-sav-food/static/js/main.75ab352f.chunk.js.map",
+    "runtime-main.js": "/HamadiMhissen/pj-sav-food/static/js/runtime-main.4194b294.js",
+    "runtime-main.js.map": "/HamadiMhissen/pj-sav-food/static/js/runtime-main.4194b294.js.map",
+    "static/js/2.252aabd8.chunk.js": "/HamadiMhissen/pj-sav-food/static/js/2.252aabd8.chunk.js",
+    "static/js/2.252aabd8.chunk.js.map": "/HamadiMhissen/pj-sav-food/static/js/2.252aabd8.chunk.js.map",
+    "static/js/3.bcb1b2e8.chunk.js": "/HamadiMhissen/pj-sav-food/static/js/3.bcb1b2e8.chunk.js",
+    "static/js/3.bcb1b2e8.chunk.js.map": "/HamadiMhissen/pj-sav-food/static/js/3.bcb1b2e8.chunk.js.map",
+    "index.html": "/HamadiMhissen/pj-sav-food/index.html",
+    "static/css/main.a573ead8.chunk.css.map": "/HamadiMhissen/pj-sav-food/static/css/main.a573ead8.chunk.css.map",
+    "static/js/2.252aabd8.chunk.js.LICENSE.txt": "/HamadiMhissen/pj-sav-food/static/js/2.252aabd8.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4194b294.js",
+    "static/js/2.252aabd8.chunk.js",
+    "static/css/main.a573ead8.chunk.css",
+    "static/js/main.75ab352f.chunk.js"
+  ]
+}
