@@ -1,4 +1,5 @@
 import { useState } from "react";
+import imgLogo from "../../images/mlrLogo.png";
 
 import { Input, StyledLink } from "../styles.js";
 import "./index.css";
@@ -22,7 +23,7 @@ function Login() {
         {/* <Button type="button" value="Retour" /> */}
       </p>
       <form className="eltFils" onSubmit={handleSubmit}>
-        <img src="/logo.png" width="255px" height="55px" alt="not-found" />
+        <img src={imgLogo} width="255px" height="55px" alt="not-found" />
         <br />
         <>
           <span className="titreStyle">{titrePage}</span>

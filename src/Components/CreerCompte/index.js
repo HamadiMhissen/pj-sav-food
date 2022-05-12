@@ -1,5 +1,6 @@
 import { React, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import "./CreerCompte.css";
 import {
   validateEmail,
@@ -19,7 +20,7 @@ function CreerCompte() {
   const emptyPerson = {
     prenom: "",
     nom: "",
-    gender: "homme",
+    sexe: "MASCULIN",
     date: { jour: "", mois: "", annee: "" },
     email: "",
     tel: "",
@@ -27,12 +28,35 @@ function CreerCompte() {
   };
   const [person, setPerson] = useState(emptyPerson);
   const [client, setClient] = useState("moi");
+  //const [emailErr, setEmailErr] = useState("");
 
-  function handleSubmit(event) {
+  const userJson = {
+    prenom: person.prenom,
+    nom: person.nom,
+    sexe: person.sexe,
+    email: person.email,
+    tel: person.tel,
+    telFixe: person.telFixe,
+    dateNaiss: `${person.date.annee}-${person.date.mois}-${person.date.jour}`,
+  };
+  const url = "http://localhost:8080/api/clients";
+
+  async function handleSubmit(event) {
     event.preventDefault();
-    alert(`utilisateur ${person.nom} crée `);
-    setPerson(emptyPerson);
-    navigate("/sign-up-mdp");
+    axios
+      .post(url, userJson)
+      .then((response) => {
+        console.log(response);
+        //navigate("/sign-up-mdp");
+      })
+      .catch((error) => {
+        if (error.response) {
+          console.log(`data : ${error.response.data.message}`);
+          alert(error.response.data.message);
+          //setEmailErr(error.response.data.message);
+        }
+        //setPerson(emptyPerson);
+      });
   }
 
   return (
@@ -44,18 +68,24 @@ function CreerCompte() {
             {"Homme "}
             <input
               type="radio"
-              name="Homme"
-              checked={person.gender === "homme"}
-              onChange={(e) => setPerson({ ...person, gender: "homme" })}
+              name="sexe"
+              value="MASCULIN"
+              checked={person.sexe === "MASCULIN"}
+              onChange={(e) =>
+                setPerson({ ...person, sexe: e.currentTarget.value })
+              }
             />
           </label>
           <label>
             {"Femme "}
             <input
               type="radio"
-              value="Femme"
-              checked={person.gender === "femme"}
-              onChange={(e) => setPerson({ ...person, gender: "femme" })}
+              name="sexe"
+              value="FEMININ"
+              checked={person.sexe === "FEMININ"}
+              onChange={(e) =>
+                setPerson({ ...person, sexe: e.currentTarget.value })
+              }
             />
           </label>
         </p>
@@ -90,7 +120,7 @@ function CreerCompte() {
               value={person.email}
               onChange={(e) => setPerson({ ...person, email: e.target.value })}
             />
-            <span>{validateEmail(person.email)} &nbsp;</span>
+            <span>{validateEmail(person.email) /*|| emailErr*/} &nbsp;</span>
           </label>
         </p>
         <p className="pContent">
@@ -114,7 +144,7 @@ function CreerCompte() {
                 setPerson({ ...person, telFixe: e.target.value })
               }
             />
-            <span>{"" || validateTel(person.telFixe)}</span>
+            <span>{validateTel(person.telFixe)}</span>
           </label>
         </p>
         <section
@@ -156,7 +186,7 @@ function CreerCompte() {
                 })
               }
             />
-            <span>{"" || validateMois(person.date.mois)}</span>
+            <span>{validateMois(person.date.mois)}</span>
           </label>
           <label>
             {"Année : "}
@@ -171,7 +201,7 @@ function CreerCompte() {
                 })
               }
             />
-            <span>{"" || validateAnnee(person.date.annee)}</span>
+            <span>{validateAnnee(person.date.annee)}</span>
           </label>
         </p>
         <h4>{commandeQuestion}</h4>
@@ -181,7 +211,9 @@ function CreerCompte() {
               type="radio"
               name="moi"
               checked={client === "moi"}
-              onChange={(e) => setClient("moi")}
+              onChange={(e) => {
+                setClient("moi");
+              }}
             />
             {"Je commande pour moi-même "}
           </label>

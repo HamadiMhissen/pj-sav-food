@@ -1,4 +1,5 @@
 import "./mdpPage.css";
+import imgLogo from "../../images/mlrLogo.png";
 import {
   validateMajuscule,
   validateMinuscule,
@@ -8,16 +9,9 @@ import {
   validateSpecialChar,
 } from "./validateMdpFunctions.js";
 import { useState } from "react";
-import { Input, InputLarge, InputDate, Button } from "../styles.js";
-import {
-  FaEye,
-  FaEyeSlash,
-  FaRegWindowClose,
-  FaCheck,
-  FaTimes,
-} from "react-icons/fa";
+import { Input } from "../styles.js";
+import { FaEye, FaEyeSlash, FaCheck, FaTimes } from "react-icons/fa";
 function CreerComptePart2() {
-  const imgUrl = "/logo.png";
   const eye = <FaEye />;
   const eyeSlash = <FaEyeSlash />;
   const checkIcon = <FaCheck style={{ color: "green" }} />;
@@ -33,7 +27,7 @@ function CreerComptePart2() {
   return (
     <div className="eltParent">
       <form className="eltFils" onSubmit={handleSubmit}>
-        <img src={imgUrl} width="320px" height="69px" alt="not-found" />
+        <img src={imgLogo} width="320px" height="69px" alt="not-found" />
         <br />
         <span className="titreStyleMdp">{titrePage}</span>
         <p>
