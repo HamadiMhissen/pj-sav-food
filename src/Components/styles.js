@@ -5,6 +5,8 @@ export const Input = styled.input`
   border: 2px solid #808080;
   border-radius: 0.75em;
   background: #f4f4f4;
+  font-size: 14px;
+  font-family: Poppins;
   display: block;
   width: 215px;
   margin: 0.25em 1em 0em 0.25em;

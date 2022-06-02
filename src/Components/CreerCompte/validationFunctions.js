@@ -1,6 +1,6 @@
 export function validatePrenomOuNom(prenom) {
-  if (prenom.length < 4 && prenom !== "") return "Trop court !";
-  else if (/\d+/g.test(prenom)) return "ne peut pas contenir des nombres !";
+  //if (prenom.length < 4 && prenom !== "") return "Trop court !";
+  if (/\d+/g.test(prenom)) return "ne peut pas contenir des nombres !";
   else if (prenom.length > 12) return "Trop long !";
   else return null;
 }

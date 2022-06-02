@@ -21,6 +21,20 @@ span {
   display: flex;
   justify-content: center;
 }
+.sectionContent {
+  text-align: center;
+  color: #662483;
+  /*marginLeft: 26em,*/
+  /*marginBottom: "-1em",*/
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number]{
+  -moz-appearance: textfield;
+}
 .radioStyled {
   cursor: pointer;
   border: 2px solid #662483;

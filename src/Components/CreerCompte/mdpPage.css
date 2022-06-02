@@ -10,44 +10,45 @@ h4 {
   text-align: center;
   color: #ef7d00;
 }
-a {
-  color: #ef7d00;
-  font-size: small;
-  margin-left: 7em;
-}
-p {
-  display: block;
-  /* justify-content: center; */
-}
+
 img {
   margin-bottom: 40px;
 }
 label {
   color: #662483;
 }
-
+.pMdp{
+  margin-left: 35px;
+}
 .eltParent {
+  margin: 2em;
   display: flex;
   justify-content: center;
 }
-.eltFils {
-  margin: 100px;
-  align-items: center;
-  /* background-color: aqua; */
+.eltFilsMdp {
+  display: grid;
+  justify-content: center;
 }
 .titreStyleMdp {
   color: #ef7d00;
-  font-size: 140%;
+  font-size: 185%;
+  text-align: center;
+  margin-bottom: 1.75em;
 }
 .eyeWrapper {
-  position: absolute;
-  top: 43%;
-  right: 45%;
+  float: left;
+  display: inline;
+  position: relative;
+  top: -4ex;
+  left: 70%;
+  margin-bottom: -2em;
   cursor: pointer;
 }
 .eye2Wrapper {
-  position: absolute;
-  top: 57%;
-  right: 45%;
+  float: left;
+  display: inline;
+  position: relative;
+  top: -4ex;
+  left: 70%;
   cursor: pointer;
 }

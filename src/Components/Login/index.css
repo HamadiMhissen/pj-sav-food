@@ -12,7 +12,6 @@ h4 {
 }
 p {
   display: block;
-  /* justify-content: center; */
 }
 a {
   color: #ef7d00;
@@ -26,18 +25,25 @@ img {
 label {
   color: #662483;
 }
+span {
+  font-size: small;
+  color: #bc0c06;
+}
 .eltParent {
+  margin-top: 0px;
   display: grid;
   justify-content: center;
 }
 .eltFils {
-  margin: 100px;
-  margin-top: 75px;
-  align-items: center;
+    display: grid;
+    margin: 50px;
+    justify-content: center;
   /* background-color: aqua; */
 }
 .titreStyle {
   margin-left: 1em;
+  margin-top: 0.75em;
+  margin-bottom: 1.5em;
   color: #ef7d00;
   font-size: 175%;
 }
