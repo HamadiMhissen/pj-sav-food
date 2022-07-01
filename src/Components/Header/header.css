@@ -1,0 +1,25 @@
+ul{
+    list-style-type:none;
+}
+ul li ul li{
+    display: none;
+}
+ul li:hover ul li{
+    display: block;
+}
+.headerTitle {
+    /*margin-right: auto;*/
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 20px;
+    color: darkorange;
+    font-style: oblique;
+    font-size: 160%;
+    font-weight: bold;
+    cursor: pointer;
+}
+.headerItem {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-style: oblique;
+}

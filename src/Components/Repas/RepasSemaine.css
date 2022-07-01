@@ -1,0 +1,39 @@
+/*.styleIcon {*/
+/*    cursor: pointer;*/
+/*    !*color: #662483;*!*/
+/*    !*background-color: #ef7d00;*!*/
+/*    height: inherit;*/
+/*    !*color: #662483;*!*/
+/*    size: 12px;*/
+/*}*/
+.semaineAnimation{
+    min-width:max-content;
+}
+span[move='1']{
+    animation: moveTowards 500ms 1;
+}
+@keyframes moveTowards {
+    0% {
+        transform: translate(250px);
+        opacity: 90%;
+    }
+    50% {
+        transform: translate(0px);
+        opacity: 60%;
+    }
+}
+
+span[move='-1']{
+    animation: moveBackwards 500ms 1;
+}
+@keyframes moveBackwards {
+    0% {
+        transform: translate(-250px);
+        opacity: 90%;
+    }
+    50% {
+        transform: translate(0px);
+        opacity: 60%;
+    }
+}
+
