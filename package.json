@@ -41,5 +41,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "engines": {
+      "name": "commande-repas-siteweb",
+      "description": "site pour commander les repas de la maison leRoux",
+      "version": "1.0.0",
+      "engines": {
+        "node": "16.x"
+      }
+    }
 }
