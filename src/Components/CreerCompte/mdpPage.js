@@ -8,6 +8,7 @@ import {
     validateSize,
     validateSpecialChar,
 } from "./validateMdpFunctions.js";
+import {URL_API_HTTP} from "../constantsAPI.js";
 import {useState} from "react";
 import axios from "axios";
 import {useLocation, useNavigate} from "react-router-dom";
@@ -29,7 +30,6 @@ function CreerComptePart2() {
 
 
     async function handleSubmit(event) {
-        const URL_API_HTTP = "http://localhost:8080/api/clients";
         const userToRegister = location.state.userToRegister;
         event.preventDefault();
         axios
@@ -40,7 +40,6 @@ function CreerComptePart2() {
             })
             .catch((error) => {
             if (error.response) {
-                    //console.log(`data : ${error.response.data.message}`);
                     alert(`l'erreur : ${error.response.data.message} a empêche le bon fonctionnement de cette page`);
                 }
             });

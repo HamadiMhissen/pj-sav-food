@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import imgLogo from "../../images/mlrLogo.png";
 
+import {URL_API_HTTP} from "../constantsAPI.js";
 import { Input, StyledLink } from "../styles.js";
 import "./index.css";
 
@@ -16,19 +17,15 @@ function Login() {
   let erreur = "erreur1";
 
   async function handleSubmit(event) {
-    const URL_API_HTTP = "http://localhost:8080/api/clients";
+
     event.preventDefault();
     axios
         .post(`${URL_API_HTTP}/authentication/login`, { email: compte.email, mdp: compte.mdp })
         .then((response) => {
-         //   if (response.data.message === "Vous n'a pas assez de privilèges pour se connecter, Veuillez confirmez votre email !")
-
-        //    else {
                 localStorage.setItem("token", response.data);
                 localStorage.setItem("username", compte.email);
                 console.log(`jeton de connexion : ${localStorage.getItem("token")}`);
                 console.log(`username : ${localStorage.getItem("username")}`);
-         //   }
         })
         .catch((error) => {
           erreur = error.response.data ;
@@ -37,8 +34,6 @@ function Login() {
             else alert(`erreur : ${error.response.data.message}`);
           }
         });
-
-    //console.log(localStorage.setItem("token", ""));
     setCompte(emptyCompte);
   }
   return (
